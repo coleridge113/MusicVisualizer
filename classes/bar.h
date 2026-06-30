@@ -3,10 +3,14 @@
 class Bar
 {
     public:
-        Bar(int width, int height);
+        Bar(float posX, float posY, int width, int height);
+        void Draw() const;
         void Grow();
+        void Shrink();
     
     private:
-        int height;
+        float posX;
+        float posY;
         int width;
+        int height;
 };
