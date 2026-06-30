@@ -14,14 +14,14 @@ void Bar::Draw() const
     DrawRectangle(posX, posY - height, width, height, WHITE);
 }
 
-void Bar::Grow()
+void Bar::Grow(float& factor)
 {
     if (height <= windowHeight)
-        height += 100;
+        height += 100 * factor * 4;
 }
     
 void Bar::Shrink()
 {
-    if (height != 0)
+    if (height >= 0)
         height -= 20;
 }
